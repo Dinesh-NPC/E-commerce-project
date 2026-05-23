@@ -8,7 +8,7 @@ connectDB();
 
 const resetAdminPassword = async () => {
   try {
-    const adminEmail = 'jasir@example.com'; // Replace with your actual admin email
+    const adminEmail = 'dinesh@example.com'; // Replace with your actual admin email
 
     const user = await User.findOne({ email: adminEmail });
 
