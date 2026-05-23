@@ -40,7 +40,7 @@ const ProductDetails = () => {
 
   const fetchProduct = async () => {
     try {
-      const response = await fetch(`/api/products/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`);
       if (!response.ok) {
         throw new Error('Product not found');
       }
@@ -57,8 +57,8 @@ const ProductDetails = () => {
     try {
       setReviewsLoading(true);
       const [reviewsRes, ratingRes] = await Promise.all([
-        fetch(`/api/products/${id}/reviews`),
-        fetch(`/api/products/${id}/reviews/average`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}/reviews`),
+        fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}/reviews/average`)
       ]);
       
       const reviewsData = await reviewsRes.json();
@@ -87,7 +87,7 @@ const ProductDetails = () => {
 
     setSubmittingReview(true);
     try {
-      const response = await fetch(`/api/products/${id}/reviews`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -8,9 +8,9 @@ connectDB();
 
 const createAdminUser = async () => {
   try {
-    const adminEmail = 'jasir@gmail.com';
+    const adminEmail = 'dinesh@gmail.com';
     const adminPassword = '111111';
-    const adminName = 'JAS';
+    const adminName = 'Dinesh';
 
     // Check if admin user already exists
     const existingAdmin = await User.findOne({ email: adminEmail });

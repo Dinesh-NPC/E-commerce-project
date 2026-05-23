@@ -16,7 +16,7 @@ const OrderDetailsPage = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const response = await fetch(`/api/orders/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -50,7 +50,7 @@ const OrderDetailsPage = () => {
 
     setCancelling(true);
     try {
-      const response = await fetch(`/api/orders/${id}/cancel`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/cancel`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const OrderDetailsPage = () => {
 
     setCancelling(true);
     try {
-      const response = await fetch(`/api/orders/${id}/item/${selectedItem._id}/cancel`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/item/${selectedItem._id}/cancel`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

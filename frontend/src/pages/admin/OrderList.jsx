@@ -21,7 +21,7 @@ const OrderList = () => {
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('/api/orders/admin', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/admin`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
