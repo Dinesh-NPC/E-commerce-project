@@ -42,3 +42,5 @@ Expect: `✅ 100 products seeded successfully!`
 
 **New Atlas string ready? Reply with confirmation to verify setup.**
 
+
+Testing Jenkins CI/CD
