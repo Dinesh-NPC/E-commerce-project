@@ -30,7 +30,7 @@ export const WishlistProvider = ({ children }) => {
   const fetchWishlist = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('/api/wishlist', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/wishlist`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -55,7 +55,7 @@ export const WishlistProvider = ({ children }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('/api/wishlist', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/wishlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -38,7 +38,7 @@ const ShopPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('/api/products');
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/products');
       const data = await response.json();
       // Debugging log to see if image links exist
       if (data.length > 0) console.log('First Product Image:', data[0].image); 

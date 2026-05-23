@@ -8,7 +8,7 @@ const OrderHistoryPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('/api/orders/myorders', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/myorders`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
