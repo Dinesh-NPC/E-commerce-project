@@ -2,6 +2,8 @@
 
 ## Plan Status: Approved & In Progress
 
+
+
 ### Step 1: Setup New Atlas (User Manual)
 - Create new Atlas cluster at cloud.mongodb.com.
 - 
