@@ -4,6 +4,7 @@
 
 ### Step 1: Setup New Atlas (User Manual)
 - Create new Atlas cluster at cloud.mongodb.com.
+- 
 - Get connection string: Database > Connect > Drivers > Copy `mongodb+srv://<username>:<password>@cluster0.xxx.mongodb.net/ecommerce?retryWrites=true&amp;w=majority`
 - Network Access > Add IP: 'Add Current IP Address'.
 
