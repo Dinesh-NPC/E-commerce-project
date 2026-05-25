@@ -7,6 +7,7 @@
 - Get connection string: Database > Connect > Drivers > Copy `mongodb+srv://<username>:<password>@cluster0.xxx.mongodb.net/ecommerce?retryWrites=true&amp;w=majority`
 - Network Access > Add IP: 'Add Current IP Address'.
 
+
 ### Step 2: Update .env (User: Security)
 ```
 cd backend
